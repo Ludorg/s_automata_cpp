@@ -10,12 +10,30 @@
 #if !defined(S_AUTOMATA_H)
 #define S_AUTOMATA_H 1
 
+/**
+ * @file s_automata.h
+ * @author Ludorg - ludorg (at) ludorg (dot) net -
+ * @brief 
+ * @version 0.1 Add documentation
+ * @date 2020-03-27
+ * 
+ * @copyright Copyright (c) 2004-2020
+ * 
+ */
+
 #include <map>
 
 #include "sofia.h"
 
 SOFIA_NS_BEGIN
 
+/**
+ * @brief Template class for an automata
+ * 
+ * @tparam TState Type for automata states
+ * @tparam TEvent Type for automata events
+ * @tparam TActions Class for automata actions. These are methods with signature void method(void). Actions are executed when firing an event
+ */
 template <typename TState, typename TEvent, typename TActions>
 class Automata
 {
@@ -25,10 +43,40 @@ class Automata
     TState currentState_;
 
 public:
+    /**
+     * @brief Set initial state of automata
+     * 
+     * @param initialState 
+     * @return true if initial state correctly initialized
+     * @return false when initial state does not exist
+     */
     bool init(const TState &initialState);
+
+    /**
+     * @brief Handle event and fire corresponding transition. Action is executed before changing state.
+     * 
+     * @param event The event to handle
+     * @param actions Class containing the methods for actions with signature void method(void)
+     * @return true if handeld
+     * @return false if event was not handled in current state
+     */
     bool handleEvent(const TEvent &event, TActions &actions);
+
+    /**
+     * @brief Add a transition to automata
+     * 
+     * @param from state
+     * @param to state
+     * @param evt event
+     * @param action (void method(void)) to be run on event firing
+     */
     void addTransition(const TState &from, const TState &to, const TEvent &evt, void (TActions::*action)(void));
 
+    /**
+     * @brief Get the current state of automata
+     * 
+     * @return const TState& 
+     */
     const TState &getCurrentState() const;
 };
 
