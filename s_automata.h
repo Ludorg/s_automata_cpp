@@ -12,7 +12,7 @@
 
 /**
  * @file s_automata.h
- * @author Ludorg - ludorg (at) ludorg (dot) net -
+ * @author Ludorg - ludorg@ludorg.net -
  * @brief 
  * @version 0.1 Add documentation
  * @date 2020-03-27
@@ -32,7 +32,7 @@ SOFIA_NS_BEGIN
  * 
  * @tparam TState Type for automata states
  * @tparam TEvent Type for automata events
- * @tparam TActions Class for automata actions. These are methods with signature void method(void). Actions are executed when firing an event
+ * @tparam TActions Class for automata actions. These are methods with signature void method_name(void). Actions are executed when firing a transition.
  */
 template <typename TState, typename TEvent, typename TActions>
 class Automata
