@@ -77,15 +77,17 @@ Usage and initilisation of Example 2 automata is the following one.
 ```
 
 ## Some history on this old code
-This code was developed in 2004 and was part of an ambitious (and immodest) side project named __Sofia__. It intended to be a way for developing knowledge.
+This code was developed in 2004 and was part of an ambitious (and immodest) side project named __Sofia__. It intended to be a way for developing knowledge. 
 
-Its introduction motto was (in french):
+Its immodest introduction motto was (in french):
 
 _Dans la seconde moitié du Ve siècle avant JC, les sophistes firent profession d'enseigner la sofia, c'est à dire tout ce qui rend l'homme plus habile, plus savant, plus vertueux. Philosophes, ils étudiaient la logique, les phénomènes célestes, remettant en question les idées reçues, éveillant les intelligences._
 
 Which is translated in:
 
 _In the second half of the 5th century BC, sophists made a profession of teaching sofia, that is, all that  makes man more skilful, more learned, more virtuous. Philosophers, they studied logic, celestial phenomena, questioning conventional wisdom, awakening intelligences._
+
+Unconsciously and unrelatedly, Sofia is also the name of my beloved daughter, born in 2015.
 
 ## Contact
 
