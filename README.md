@@ -1,16 +1,18 @@
+# s_automata_cpp: C++ template based automata class
+
 ![License](https://img.shields.io/github/license/Ludorg/s_automata_cpp)
 ![Twitter Follow](https://img.shields.io/twitter/follow/Ludorg1?style=social)
-# s_automata_cpp: C++ template based automata class
 
 s_automata_cpp is a C++ template class that ease development of state/transition automatas.
 
 ## Usage
 
 The template arguments are TState, TEvent, and TActions:
+
 - TState: Type for automata states
 - TEvent: Type for automata events
 - TActions: Class for automata actions. These are class methods with signature void method_name(void). Actions are executed when firing a transition.
- 
+
 ```cpp
 template <typename TState, typename TEvent, typename TActions>
 class Automata
@@ -44,7 +46,7 @@ public:
 
 See example files.
 
-### How to compile them?
+### How to compile them
 
 ```bash
 g++ example1.cpp -o ex1
@@ -77,7 +79,8 @@ Usage and initilisation of Example 2 automata is the following one.
 ```
 
 ## Some history on this old code
-This code was developed in 2004 and was part of an ambitious (and immodest) side project named __Sofia__. It intended to be a way for developing knowledge. 
+
+This code was developed in 2004 and was part of an ambitious (and immodest) side project named __Sofia__. It intended to be a way for developing knowledge.
 
 Its immodest introduction motto was (in french):
 
