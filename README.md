@@ -51,9 +51,30 @@ g++ example1.cpp -o ex1
 g++ example2.cpp -o ex2
 ```
 
-Example 2 automata is depicted above.
+Example 2 automata is depicted below.
 
 ![Example 2 automata](./example2.png)
+
+Usage and initilisation of Example 2 automata is the following one.
+
+```cpp
+    Motor motor;
+    Automata<States, Event, Motor> motor_automata;
+
+    motor_automata.addTransition(S_OFF, S_SPEED_1, E_SPEED_INC, &Motor::start);
+    motor_automata.addTransition(S_SPEED_1, S_SPEED_2, E_SPEED_INC, &Motor::inc);
+    motor_automata.addTransition(S_SPEED_2, S_SPEED_1, E_SPEED_DEC, &Motor::dec);
+    motor_automata.addTransition(S_SPEED_1, S_OFF, E_STOP, &Motor::stop);
+    motor_automata.addTransition(S_SPEED_2, S_OFF, E_STOP, &Motor::stop);
+    motor_automata.addTransition(S_SPEED_1, S_OFF, E_SPEED_DEC, &Motor::dec);
+
+    motor_automata.init(S_OFF);
+
+    std::cout << "Motor state is " << motor_automata.getCurrentState() << std::endl;
+    std::cout << "Motor speed is " << motor.getSpeed() << std::endl;
+
+    motor_automata.handleEvent(E_SPEED_INC, motor);
+```
 
 ## Some history on this old code
 This code was developed in 2004 and was part of an ambitious (and immodest) side project named __Sofia__. It intended to be a way for developing knowledge.
