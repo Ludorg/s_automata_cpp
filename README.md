@@ -44,13 +44,16 @@ public:
 
 See example files.
 
-### To compile them
+### How to compile them?
 
 ```bash
 g++ example1.cpp -o ex1
+g++ example2.cpp -o ex2
 ```
 
+Example 2 automata is depicted above.
 
+![Example 2 automata](./example2.png)
 
 ## Some history on this old code
 This code was developed in 2004 and was part of an ambitious (and immodest) side project named __Sofia__. It intended to be a way for developing knowledge.
