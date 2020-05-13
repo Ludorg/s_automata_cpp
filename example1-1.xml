@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automata name="automata_ex1">
+    <initial_state>Off</initial_state>
+    <state name="Off">
+        <to evt="1" action="&amp;Light::on">On</to>
+    </state>
+    <state name="On">
+        <to evt="0" action="&amp;Light::off">Off</to>
+    </state>
+</automata>
+
+
+
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<automata>
+    <initial_state></initial_state>
+    <state name="">
+        <to evt="" action=""></to>
+    </state>
+</automata>-->
