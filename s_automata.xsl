@@ -4,9 +4,9 @@
     <xsl:output method="text" indent="no"/>
     <xsl:template match="/automata">        
         <xsl:variable name="aut_n" select="./@name"/>
-        <xsl:text>void </xsl:text><xsl:value-of select="$aut_n"/>_init()<xsl:text>
+<!--        <xsl:text>inline void </xsl:text><xsl:value-of select="$aut_n"/>_init()<xsl:text>
 {
-</xsl:text>
+</xsl:text>-->
         <xsl:text>  </xsl:text><xsl:value-of select="$aut_n"/>.init(<xsl:value-of select="initial_state"/>);<xsl:text>
 </xsl:text>
         <xsl:for-each select="state">
@@ -19,7 +19,7 @@
 </xsl:text>
             </xsl:for-each>
         </xsl:for-each>
-        <xsl:text>}
-</xsl:text>
+        <!--<xsl:text>}
+</xsl:text>-->
     </xsl:template>
 </xsl:stylesheet>

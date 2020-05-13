@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automata name="motor_automata">
+    <initial_state>S_OFF</initial_state>
+    <state name="S_OFF">
+        <to evt="E_SPEED_INC" action="&amp;Motor::start">S_SPEED_1</to>
+    </state>
+    <state name="S_SPEED_1">
+        <to evt="E_SPEED_INC" action="&amp;Motor::inc">S_SPEED_2</to>
+        <to evt="E_STOP" action="&amp;Motor::stop">S_OFF</to>
+        <to evt="E_SPEED_DEC" action="&amp;Motor::dec">S_OFF</to>
+    </state>
+    <state name="S_SPEED_2">
+        <to evt="E_STOP" action="&amp;Motor::stop">S_OFF</to>
+        <to evt="E_SPEED_DEC" action="&amp;Motor::dec">S_SPEED_1</to>
+    </state>
+</automata>

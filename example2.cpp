@@ -64,14 +64,16 @@ int main()
     Motor motor;
     Automata<States, Event, Motor> motor_automata;
 
-    motor_automata.addTransition(S_OFF, S_SPEED_1, E_SPEED_INC, &Motor::start);
-    motor_automata.addTransition(S_SPEED_1, S_SPEED_2, E_SPEED_INC, &Motor::inc);
-    motor_automata.addTransition(S_SPEED_2, S_SPEED_1, E_SPEED_DEC, &Motor::dec);
-    motor_automata.addTransition(S_SPEED_1, S_OFF, E_STOP, &Motor::stop);
-    motor_automata.addTransition(S_SPEED_2, S_OFF, E_STOP, &Motor::stop);
-    motor_automata.addTransition(S_SPEED_1, S_OFF, E_SPEED_DEC, &Motor::dec);
+    // motor_automata.addTransition(S_OFF, S_SPEED_1, E_SPEED_INC, &Motor::start);
+    // motor_automata.addTransition(S_SPEED_1, S_SPEED_2, E_SPEED_INC, &Motor::inc);
+    // motor_automata.addTransition(S_SPEED_2, S_SPEED_1, E_SPEED_DEC, &Motor::dec);
+    // motor_automata.addTransition(S_SPEED_1, S_OFF, E_STOP, &Motor::stop);
+    // motor_automata.addTransition(S_SPEED_2, S_OFF, E_STOP, &Motor::stop);
+    // motor_automata.addTransition(S_SPEED_1, S_OFF, E_SPEED_DEC, &Motor::dec);
 
-    motor_automata.init(S_OFF);
+    // motor_automata.init(S_OFF);
+
+#include "example2_gen.inl"
 
     std::cout << "Motor state is " << motor_automata.getCurrentState() << std::endl;
     std::cout << "Motor speed is " << motor.getSpeed() << std::endl;
